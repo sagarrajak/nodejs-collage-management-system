@@ -1,0 +1,16 @@
+if messages.loginMessage 
+    .alert.alert-danger
+        button.close(type='button', data-dismiss='alert')
+        i.fa.fa-times-circle.o
+        div #{messages.loginMessage}
+else if messages.signupMessages 
+    .alert.alert-danger
+        button.close(type='button', data-dismiss='alert')
+        i.fa.fa-times-circle.o
+        div #{messages.signupMessages}
+else if messages.errors 
+    .alert.alert-danger
+        button.close(type='button', data-dismiss='alert')
+        i.fa.fa-times-circle.o
+        for  val in messages.errors
+            div #{val.msg}

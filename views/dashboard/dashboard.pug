@@ -1,0 +1,30 @@
+extends ../index
+
+block dashboard
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand( href='#') bla bla Collage 
+            button.navbar-toggler(type="button",data-toggle="collapse",data-target="#navbarNav",aria-controls="false",aria-expanded="false",aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+        div.collapse.navbar-collapse(id="navbarNav")
+            div.navbar-nav.ml-auto
+                div.nav-item.active.align-items-start
+                    a.nav-link(href='/dashboard/home') Home
+                div.nav-item
+                    a.nav-link(href='/dashboard/student') Student
+                div.nav-item
+                    a.nav-link(href='/dashboard/faculty') Faculty 
+                div.nav-item
+                    a.nav-link(href='/dashboard/staff') Staff
+                div.nav-item.dropdown.margin-right
+                    a.nav-link.dropdown-toggle(href='#',id='navbarDropdownMenuLink',data-toggle='dropdown',aria-haspopup="true",aria-expanded="false") 
+                    div.dropdown-menu(aria-labelledby="navbarDropdownMenuLink")
+                     a.dropdown-item(href='#') Attendance
+                     a.dropdown-item(href='#') Calender
+                     a.dropdown-item(href='/logout') Logout
+    div.container
+        block home
+        block student
+        block faculty 
+        block staff 
+        block attendance
+        block calender

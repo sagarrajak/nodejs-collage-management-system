@@ -1,0 +1,17 @@
+extends ../index
+
+block account
+    form(action="/signup" method="POST")
+        include flash
+        div(class="form-group")
+            label(for="signUpUsername") Username
+            input(type="email" class='form-control' name="username" id="signUpUsername" 
+                    placeholder="Email address"
+                    autofocus required )
+        div(class="form-group")
+            label(for="signUpPassword") Password
+            input(type="password" class='form-control' name="password" id="signUpPassword" )
+        div(class="form-check")
+            input(type="checkbox" class="form-check-input" id="signUpCheckBox")
+            label(for="signUpCheckBox") Remember password 
+        button(type="submit" class="btn btn-primary") SignUp

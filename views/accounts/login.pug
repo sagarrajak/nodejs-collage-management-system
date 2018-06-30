@@ -1,0 +1,18 @@
+extends ../index 
+
+block account 
+    form(action="/login" method="POST")
+        include flash 
+        div(class="form-group")
+            label(for='loginEmail') Email
+            input(type='email' name="username" class='form-control' id='loginEmail'
+                    placeholder='Email address' autofocus required)
+        div(class="form-group")
+            label(for="loginPassword") Password
+            input(type="password" name="password" class='form-control' id="loginPassword"
+                 placeholder="password" required)
+        div(class="form-check")
+            input(type="checkbox" class="form-check-input" id="loginCheckBox" required)
+            label(for="loginCheckBox" class="from-check-label") Remember password 
+        button(type="submit" class="btn btn-primary") Submit
+        a.btn.btn-primary(href='/signup') Create account
